@@ -15,7 +15,8 @@ module.exports = {
         'last 4 FirefoxAndroid versions',
         'last 4 iOS versions'
       ]
-    })
+    }),
+    require('tailwindcss')
 
     // https://github.com/elchininet/postcss-rtlcss
     // If you want to support RTL css, then
@@ -24,4 +25,4 @@ module.exports = {
     // 3. uncomment the following line:
     // require('postcss-rtlcss')
   ]
-}
+};
