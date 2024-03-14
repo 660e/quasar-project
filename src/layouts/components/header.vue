@@ -5,7 +5,10 @@ defineOptions({ name: 'app-header' });
 <template>
   <q-header class="h-12 pl-4 pr-2 flex items-center">
     <div class="leading-none text-2xl">Quasar App</div>
+
     <q-space />
+
+    <q-btn icon="travel_explore" size="12px" flat round />
     <q-btn icon="mail" size="12px" flat round>
       <q-badge color="negative" floating>99</q-badge>
     </q-btn>

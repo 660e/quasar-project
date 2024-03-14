@@ -3,5 +3,5 @@ defineOptions({ name: 'app-menu' });
 </script>
 
 <template>
-  <q-drawer bordered show-if-above>app-menu</q-drawer>
+  <q-drawer :width="200" bordered show-if-above>app-menu</q-drawer>
 </template>
