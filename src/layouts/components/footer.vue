@@ -5,10 +5,10 @@ defineOptions({ name: 'app-footer' });
 </script>
 
 <template>
-  <q-footer>
+  <q-footer class="bg-transparent">
     <q-separator />
-    <div class="h-9 px-4 flex justify-between items-center">
-      <div class="space-x-2 flex">
+    <div :class="[$q.dark.isActive ? 'text-white' : 'text-dark']" class="h-9 px-4 flex justify-between items-center">
+      <div class="flex space-x-2">
         <span>Home</span>
         <span>/</span>
         <span>Components</span>
