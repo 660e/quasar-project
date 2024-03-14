@@ -9,7 +9,7 @@ defineOptions({ name: 'app-layout' });
 </script>
 
 <template>
-  <q-layout view="hhh lpr lfr">
+  <q-layout view="hhh lpr lfr" class="overflow-hidden">
     <app-header />
     <app-footer />
     <app-menu />
