@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import { useLayoutStore } from '@/stores/modules/layout';
+import menu from '@/assets/json/menu.json';
 
 defineOptions({ name: 'app-menu' });
 
 const $layoutStore = useLayoutStore();
+
+console.log(menu);
 </script>
 
 <template>
