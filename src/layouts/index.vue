@@ -7,7 +7,7 @@ import AppTrigger from './components/trigger.vue';
 
 defineOptions({ name: 'app-layout' });
 
-const tweak = (offset: number, height: number) => ({ height: `${height - offset - (36 + 1) * 2}px` });
+const tweak = (offset: number, height: number) => ({ height: `${height - offset - 36 - 1}px` });
 </script>
 
 <template>
