@@ -6,5 +6,46 @@
       "title": "Home"
     },
     "component": "pages/home/index"
+  },
+  {
+    "path": "system",
+    "name": "system",
+    "meta": {
+      "title": "System Management"
+    },
+    "children": [
+      {
+        "path": "dictionary",
+        "name": "dictionary-management",
+        "meta": {
+          "title": "Dictionary Management"
+        },
+        "component": "pages/system/dictionary/index"
+      },
+      {
+        "path": "menu",
+        "name": "menu-management",
+        "meta": {
+          "title": "Menu Management"
+        },
+        "component": "pages/system/menu/index"
+      },
+      {
+        "path": "role",
+        "name": "role-management",
+        "meta": {
+          "title": "Role Management"
+        },
+        "component": "pages/system/role/index"
+      },
+      {
+        "path": "user",
+        "name": "user-management",
+        "meta": {
+          "title": "User Management"
+        },
+        "component": "pages/system/user/index"
+      }
+    ]
   }
 ]
