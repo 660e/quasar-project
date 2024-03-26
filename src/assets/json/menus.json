@@ -3,7 +3,7 @@
     "path": "home",
     "name": "home",
     "meta": {
-      "title": "Home"
+      "label": "Home"
     },
     "component": "pages/home/index"
   },
@@ -11,14 +11,14 @@
     "path": "system",
     "name": "system",
     "meta": {
-      "title": "System Management"
+      "label": "System Management"
     },
     "children": [
       {
         "path": "dictionary",
         "name": "dictionary-management",
         "meta": {
-          "title": "Dictionary Management"
+          "label": "Dictionary Management"
         },
         "component": "pages/system/dictionary/index"
       },
@@ -26,7 +26,7 @@
         "path": "menu",
         "name": "menu-management",
         "meta": {
-          "title": "Menu Management"
+          "label": "Menu Management"
         },
         "component": "pages/system/menu/index"
       },
@@ -34,7 +34,7 @@
         "path": "role",
         "name": "role-management",
         "meta": {
-          "title": "Role Management"
+          "label": "Role Management"
         },
         "component": "pages/system/role/index"
       },
@@ -42,7 +42,7 @@
         "path": "user",
         "name": "user-management",
         "meta": {
-          "title": "User Management"
+          "label": "User Management"
         },
         "component": "pages/system/user/index"
       }
