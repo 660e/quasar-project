@@ -1,29 +1,35 @@
 <script lang="ts" setup>
+import { h, VNode } from 'vue';
+import { QExpansionItem, QItem, QItemSection, QList } from 'quasar';
 import { useLayoutStore } from '@/stores/modules/layout';
 import menus from '@/assets/json/menus.json';
 
 defineOptions({ name: 'app-menu' });
 
+interface Menu {
+  path: string;
+  name: string;
+  meta: {
+    label: string;
+  };
+  component?: string;
+  children?: Menu[];
+}
+
 const $layoutStore = useLayoutStore();
 
-console.log(menus);
+const menuList = () => h(QList, () => menus.map(menu => menuItem(menu)));
+const menuItem = (menu: Menu): VNode => {
+  if (menu.children?.length) {
+    return h(QExpansionItem, { label: menu.meta.label }, () => menu.children?.map(m => menuItem(m)));
+  } else {
+    return h(QItem, { clickable: true }, () => h(QItemSection, () => menu.meta.label));
+  }
+};
 </script>
 
 <template>
-  <q-drawer v-model="$layoutStore.drawer" :width="220" bordered>
-    <q-list>
-      <template v-for="menu in menus" :key="menu.name">
-        <q-expansion-item v-if="menu.children?.length" :label="menu.meta.label">
-          <q-list>
-            <q-item v-for="m in menu.children" :key="m.name" clickable v-ripple>
-              <q-item-section>{{ m.meta.label }}</q-item-section>
-            </q-item>
-          </q-list>
-        </q-expansion-item>
-        <q-item v-else clickable v-ripple>
-          <q-item-section>{{ menu.meta.label }}</q-item-section>
-        </q-item>
-      </template>
-    </q-list>
+  <q-drawer v-model="$layoutStore.drawer" :width="230" bordered>
+    <menu-list />
   </q-drawer>
 </template>

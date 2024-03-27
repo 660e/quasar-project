@@ -47,5 +47,47 @@
         "component": "pages/system/user/index"
       }
     ]
+  },
+  {
+    "path": "example",
+    "name": "example",
+    "meta": {
+      "label": "Example"
+    },
+    "children": [
+      {
+        "path": "menu1",
+        "name": "example-menu-1",
+        "meta": {
+          "label": "Menu 1"
+        },
+        "component": "pages/home/index"
+      },
+      {
+        "path": "menu2",
+        "name": "example-menu-2",
+        "meta": {
+          "label": "Menu 2"
+        },
+        "children": [
+          {
+            "path": "menu2-1",
+            "name": "example-menu-2-1",
+            "meta": {
+              "label": "Menu 2-1"
+            },
+            "component": "pages/home/index"
+          },
+          {
+            "path": "menu2-2",
+            "name": "example-menu-2-2",
+            "meta": {
+              "label": "Menu 2-2"
+            },
+            "component": "pages/home/index"
+          }
+        ]
+      }
+    ]
   }
 ]
