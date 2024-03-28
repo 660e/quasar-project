@@ -1,7 +1,22 @@
 import { route } from 'quasar/wrappers';
-import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
+import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-import routes from './routes';
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: () => import('@/layouts/index.vue'),
+    children: []
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/login/index.vue')
+  },
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import('@/pages/404.vue')
+  }
+];
 
 /*
  * If not building with SSR mode, you can
